@@ -1,0 +1,36 @@
+{
+  "name": "swing",
+  "version": "0.0.1",
+  "description": "A modern app to storage you server config and stuff",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Birate/Swing.git"
+  },
+  "keywords": [
+    "webapp",
+    "app",
+    "server",
+    "config",
+    "storage",
+    "electron"
+  ],
+  "author": {
+    "name": "Bryan Perdrizat",
+    "email": "bryan.perdrizat@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Birate/Swing/issues"
+  },
+  "homepage": "https://github.com/Birate/Swing#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.5",
+    "jade": "^1.11.0",
+    "stylus": "^0.53.0"
+  }
+}
