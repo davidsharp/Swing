@@ -1,0 +1,23 @@
+//sidebar
+aside
+    nav
+        ul
+            - var i = 15
+            while i > 0
+                - i--
+                li
+                    div.hover
+                        i.mdi.mdi-ubuntu.server-icon
+                        div.server-info
+                            span.server-host
+                                b Host: 
+                                | DigitalOcean
+                            span.server-lastReboot
+                                b Last Reboot: 
+                                | 17 days ago
+                            span.server-description
+                                b Description: 
+                                | Static website host 
+                    div.server-state
+                        span.server-name georgous-summer
+                        span.server-ip (88.88.88.88)

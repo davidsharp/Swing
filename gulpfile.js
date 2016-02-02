@@ -43,4 +43,3 @@ gulp.task('electron', ['build'], function(){
 
 gulp.task('default', ['watch', 'electron']);
 gulp.task('build', ['jade', 'stylus', 'copy']);
-
