@@ -1,0 +1,58 @@
+main
+    display block
+    background-color #f0f0f0
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 80px
+    
+    section
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content flex-start
+        align-items flex-start
+        width 100%
+        height 100%
+        padding 10px
+        font-family "Ubuntu Regular"
+        
+    .server
+        flex 0 0 200px
+        height 200px
+        display flex
+        flex-direction column
+        flex-wrap nowrap
+        justify-content center
+        align-items center
+        padding 5px
+        overflow hidden
+        position relative
+        background-color lighten(#f0f0f0, 10)
+        border 1px solid darken(#f0f0f0, 15)
+        &:after
+          content '';
+          display block
+          position absolute
+          top -15px
+          right -15px
+          width 30px
+          height 30px
+          border-radius 50%
+          background-color tomato
+          
+        
+        .mdi
+            font-size 2.5em
+            margin-bottom 20px
+        &-name
+            font-size 1em
+            font-family "Monsterrat Bold", sans-serif
+            margin-bottom 4px
+            text-align center
+        &-ip
+            font-size 0.6em
+            font-family "Ubuntu Italic", sans-serif
+            color #c3c3c3
+            //margin-top 10px

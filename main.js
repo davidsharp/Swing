@@ -8,8 +8,12 @@ const APP           = ELECTRON.app;
 const BROWSERWINDOW = ELECTRON.BrowserWindow;
 
 var path = require('path');
-var MainWindow;
+var mainWindow;
 
+process.on('uncaughtException', function (err) {
+  console.error('Uncaught Exception. Invetigate.');
+  console.error(err.stack);
+});
 
 APP.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
@@ -18,7 +22,7 @@ APP.on('window-all-closed', function() {
 });
 
 APP.on('ready', function() {
-  MainWindow = new BROWSERWINDOW(
+  mainWindow = new BROWSERWINDOW(
     { 
       width: 1280, 
       height: 720, 
@@ -26,9 +30,9 @@ APP.on('ready', function() {
       'min-height': 720, 
       frame: false
      });
-  MainWindow.loadURL('file://' + path.join(__dirname, 'assets/html/index.html'));
-  MainWindow.webContents.openDevTools();
-  MainWindow.on('closed', function() {
-    MainWindow = null;
+  mainWindow.loadURL('file://' + path.join(__dirname, 'assets/html/index.html'));
+  mainWindow.webContents.openDevTools();
+  mainWindow.on('closed', function() {
+    mainWindow = null;
   });
 });

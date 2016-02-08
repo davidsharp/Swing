@@ -1,0 +1,31 @@
+aside
+    display block
+    position fixed
+    width 80px
+    top 0
+    left 0
+    bottom 0
+    background-color #1C142D
+    -webkit-app-region: no-drag;
+
+.nav
+    display flex 
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-start
+    align-items stretch
+
+    &-items
+        flex 1 1 80px
+        text-align center
+        cursor pointer
+        transition background-color 0.2s cubic-bezier(0.76, 0.48, 0.21,-0.36)
+        &:hover
+            background-color lighten(#1C142D, 6)
+        
+    .mdi
+        color white
+        font-size 3em
+        display block
+    .mdi:before
+        vertical-align -webkit-baseline-middle
