@@ -1,3 +1,5 @@
+/* global process */
+/* global __dirname */
 // Define Electron Module
 "use strict";
 
@@ -16,7 +18,14 @@ APP.on('window-all-closed', function() {
 });
 
 APP.on('ready', function() {
-  MainWindow = new BROWSERWINDOW({ width: 1280, height: 720, frame: false });
+  MainWindow = new BROWSERWINDOW(
+    { 
+      width: 1280, 
+      height: 720, 
+      'min-width': 1280, 
+      'min-height': 720, 
+      frame: false
+     });
   MainWindow.loadURL('file://' + path.join(__dirname, 'assets/html/index.html'));
   MainWindow.webContents.openDevTools();
   MainWindow.on('closed', function() {
