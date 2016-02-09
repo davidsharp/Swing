@@ -1,6 +1,3 @@
-/* global process */
-/* global __dirname */
-// Define Electron Module
 "use strict";
 
 const ELECTRON      = require('electron');
@@ -16,18 +13,18 @@ process.on('uncaughtException', function (err) {
 });
 
 APP.on('window-all-closed', function() {
-  if (process.platform != 'darwin') {
+  if (process.platform !== 'darwin') {
     APP.quit();
   }
 });
 
 APP.on('ready', function() {
   mainWindow = new BROWSERWINDOW(
-    { 
-      width: 1280, 
-      height: 720, 
-      'min-width': 1280, 
-      'min-height': 720, 
+    {
+      width: 1280,
+      height: 720,
+      'min-width': 1280,
+      'min-height': 720,
       frame: false
      });
   mainWindow.loadURL('file://' + path.join(__dirname, 'assets/html/index.html'));

@@ -19,9 +19,10 @@ html
                 i.mdi.mdi-server-plus
     main
         section
-            article.server
-                i.mdi.mdi-ubuntu.server-os
-                span.server-name georgous-summer #1 Forge Web server
-                span.server-ip (192.168.17.21)
-            article
-        
+            - var i = 0
+            while i < 6
+              - i++
+              article.server
+                  i.mdi.mdi-ubuntu.server-os
+                  span.server-name georgous-summer #1 Forge Web server
+                  span.server-ip (192.168.17.21)
